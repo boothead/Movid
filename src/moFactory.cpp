@@ -53,6 +53,7 @@ void moFactory::init() {
 	REGISTER_MODULE(ImageDisplay);
 	REGISTER_MODULE(Invert);
 	REGISTER_MODULE(Justify);
+	REGISTER_MODULE(KinectZMQ);
 	REGISTER_MODULE(Mask);
 	REGISTER_MODULE(MirrorImage);
 	REGISTER_MODULE(MunkresBlobTracker);

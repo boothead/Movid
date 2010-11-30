@@ -26,6 +26,7 @@
 
 class moDataStream;
 
+
 class moKinectZMQModule : public moModule {
 public:
     moKinectZMQModule();
@@ -38,10 +39,15 @@ public:
 
 private:
 	zmq::socket_t depth_socket;
-	const char *depth_sub_str;
+	zmq::socket_t rgb_socket;
+	IplImage *depth_buffer;
+	IplImage *rgb_buffer;
+
+	static const char depth_sub_str[];
+	static const char rgb_sub_str[];
 	moDataStream *depth;
 	moDataStream *rgb;
-	IplImage* output_buffer;
+
 
 	MODULE_INTERNALS();
 };
